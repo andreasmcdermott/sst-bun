@@ -10,7 +10,7 @@ export default $config({
   },
   async run() {
     const vpc = new sst.aws.Vpc("MyVpc");
-    const bucket = new sst.aws.Bucket("MyBucket");
+    // const bucket = new sst.aws.Bucket("MyBucket");
 
     const cluster = new sst.aws.Cluster("MyCluster", { vpc });
     new sst.aws.Service("MyService", {
@@ -21,7 +21,7 @@ export default $config({
       dev: {
         command: "bun dev",
       },
-      link: [bucket],
+      // link: [bucket],
     });
   },
 });
